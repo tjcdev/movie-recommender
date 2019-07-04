@@ -1,3 +1,9 @@
+import os
+import sys
+module_path = os.path.abspath(os.path.join('..'))
+if module_path not in sys.path:
+    sys.path.append(module_path)
+    
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -7,9 +13,9 @@ from sklearn.metrics.pairwise import cosine_similarity
     This class will load in the projects data, convert it to TF-IDF vectors
     and then autoencoder these vectors
 '''
-def load_projects():
+def load_projects():    
     # Load the full project data from the pickle file
-    projects = pd.read_pickle("./data/raw/project_data")
+    projects = pd.read_pickle("../data/raw/project_data")
 
     # Get the TF-IDF for the description fields
     v = TfidfVectorizer()
@@ -33,7 +39,7 @@ def load_projects():
 def load_user():
     # Load the adjacency matrix for users and projects
     # Note: these are only for users who have interacted with multiple projects
-    users_projects =  pd.read_pickle('./data/processed/active_profile_projects')
+    users_projects =  pd.read_pickle('../data/processed/active_profile_projects')
 
     users_projects = users_projects.drop(columns=['profile'])
 

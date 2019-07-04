@@ -2,14 +2,23 @@ import numpy as np
 np.random.seed(0)
 from time import gmtime, strftime
 
-import CDAE
-import load_data
-import metrics
 from keras.models import Model
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
-
 from scipy.sparse import vstack
+
+import os
+import sys
+module_path = os.path.abspath(os.path.join('..'))
+if module_path not in sys.path:
+    sys.path.append(module_path)
+
+import src.CDAE
+import src.load_data
+import src.metrics
+
+
+
 
 class Recommender:
     def __init__(self, project_ids):
