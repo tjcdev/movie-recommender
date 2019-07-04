@@ -17,9 +17,6 @@ import src.CDAE
 import src.load_data
 import src.metrics
 
-
-
-
 class Recommender:
     def __init__(self, project_ids):
         self.project_ids = project_ids
