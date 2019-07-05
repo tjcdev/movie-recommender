@@ -10,7 +10,6 @@ dependencies:
   - astor=0.7.1=py_0
   - attrs=19.1.0=py36_1
   - backcall=0.1.0=py36_0
-  - blas=2.7=openblas
   - bleach=3.1.0=py36_0
   - c-ares=1.15.0=h1de35cc_1001
   - ca-certificates=2019.5.15=0
@@ -58,16 +57,12 @@ dependencies:
   - keras-preprocessing=1.0.9=py_1
   - kiwisolver=1.1.0=py36h770b8ee_0
   - ld64=274.2=h7c2db76_0
-  - libblas=3.8.0=7_openblas
-  - libcblas=3.8.0=7_openblas
   - libcxx=4.0.1=h579ed51_0
   - libcxxabi=4.0.1=hebd6815_0
   - libffi=3.2.1=h6de7cb9_1006
   - libgfortran=3.0.1=0
   - libgpuarray=0.7.6=h1de35cc_1003
   - libiconv=1.15=hdd342a3_7
-  - liblapack=3.8.0=7_openblas
-  - liblapacke=3.8.0=7_openblas
   - libopenblas=0.3.6=hdc02c5d_0
   - libpng=1.6.37=ha441bb4_0
   - libprotobuf=3.8.0=hfbae3c0_0
@@ -88,7 +83,6 @@ dependencies:
   - notebook=5.7.8=py36_0
   - numpy=1.16.4=py36h926163e_0
   - numpy-base=1.16.4=py36ha711998_0
-  - openblas=0.3.5=h436c29b_1001
   - openssl=1.1.1=h1de35cc_0
   - pandas=0.24.2=py36h0a44026_0
   - pandoc=2.2.3.2=0
@@ -149,5 +143,12 @@ dependencies:
   - yaml=0.1.7=h1de35cc_1001
   - zeromq=4.3.1=h0a44026_3
   - zlib=1.2.11=h1de35cc_1004
+  - pip:
+    - blas==2.7=openblas
+    - liblapack==3.8.0=7_openblas
+    - libcblas==3.8.0=7_openblas
+    - liblapacke==3.8.0=7_openblas
+    - openblas==0.3.5=h436c29b_1001
+    - libblas==3.8.0=7_openblas
 prefix: /Users/thomascartwright/miniconda3/envs/cdea
 

@@ -35,6 +35,8 @@ class Recommender:
 
         user_projects = np.array(user_projects, copy=True)
 
+        # Count the number of projects a user has done and cut out some of these projects to be used
+        # to validate the model at a later stage
         ones_idx = np.nonzero(user_projects)
         num_ones = len(np.array(ones_idx).flatten())
         to_cut = np.random.choice(num_ones, int(np.ceil(perc_projects * num_ones)), replace=False)

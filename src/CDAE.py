@@ -5,20 +5,6 @@ from keras.regularizers import l2
 def create(I, U, K, hidden_activation, output_activation, q=0.5, l=0.01):
     '''
     create model
-    Reference:
-      Yao Wu, Christopher DuBois, Alice X. Zheng, Martin Ester.
-        Collaborative Denoising Auto-Encoders for Top-N Recommender Systems.
-          The 9th ACM International Conference on Web Search and Data Mining (WSDM'16), p153--162, 2016.
-
-    :param I: number of items
-    :param U: number of users
-    :param K: number of units in hidden layer
-    :param hidden_activation: activation function of hidden layer
-    :param output_activation: activation function of output layer
-    :param q: drop probability
-    :param l: regularization parameter of L2 regularization
-    :return: CDAE
-    :rtype: keras.models.Model
     '''
     x_item = Input((I,), name='x_item')
     h_item = Dropout(q)(x_item)
