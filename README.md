@@ -3,6 +3,10 @@
 In this repo we have build a recommender system that uses the content of SciStarter projects in order to recommend users new projects that are most similar to projects they have already done.
 
 
+## Setup
+
+To run the notebooks and src files you will first need to set up your conda environment using the ```environment.yml``` file
+
 ## Datasets
 
 There are two main aspects to these datasets.
